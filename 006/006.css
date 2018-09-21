@@ -1,0 +1,67 @@
+html,body,
+.checkbox,
+.checkbox .inner,
+.checkbox .inner .toggle{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* 画出外侧椭圆 */
+.checkbox{
+    width: 10em;
+    height: 5em;
+    background: linear-gradient(silver,whitesmoke);
+    border-radius: 2.5em;
+    font-size: 40px;
+}
+/* 画出内侧椭圆 */
+.checkbox .inner{
+    width: 8em;
+    height: 3.5em;
+    background: linear-gradient(dimgray,silver);
+    border-radius: 2.5em;
+    font-size: 40px;
+}
+/* 画出圆形按钮 */
+.checkbox .inner .toggle{
+    width: 3.5em;
+    height: 3.5em;
+    background: linear-gradient(to top,silver,whitesmoke);
+    border-radius:  50%;
+    box-shadow: 0 0.4em 0.6em rgba(0, 0, 0, 0.2);
+    position: relative;
+    left:-30%;
+}
+/* 为按钮增加立体效果 */
+.checkbox .inner .toggle::before{
+    content: '';
+    position: absolute;
+    height: 80%;
+    width: 80%;
+    background: linear-gradient(whitesmoke,silver);
+    border-radius: 50%;
+}
+/* 写上OFF，行高是更具父元素高度确定的 */
+.checkbox .inner .toggle::before{
+    content: 'OFF';
+    text-align: center;
+    line-height: calc(3.5em * 0.8);
+    font-family: sans-serif;
+    color: gray;
+}
+/* 设置avtive 时控件的样式 */
+.checkbox .inner.active{
+    background: linear-gradient(green,limegreen);
+}
+.checkbox .inner.active .toggle{
+    left:30%;
+}
+.checkbox .inner.active .toggle::before{
+    content: 'ON';
+    color: limegreen;
+}
+/* 设置动画时间 */
+.checkbox .inner .toggle{
+    transition: .5s;
+}
