@@ -1,7 +1,6 @@
-# 3D 文字跑马灯特效
+# 瞄准按钮效果
 ======================
 ## 知识点
-1. transform-origin
-2. perspective
-3. rotateY()
-4. animation-delay
+1. :not
+2. filter functions
+3. animation-diorection
