@@ -1,6 +1,6 @@
-# 立体书籍效果
+# 文字的变化
 ======================
 ## 知识点
-1. [skewY()](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/skewY)
-2. [transform-origin](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-origin)
-3. [brightness()](https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/brightness)
+1. [opacity](https://developer.mozilla.org/en-US/docs/Web/CSS/filter#Functions)
+2. [nth-child()](https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child)
+3. [transition ](https://developer.mozilla.org/en-US/docs/Web/CSS/transition)
