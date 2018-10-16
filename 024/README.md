@@ -1,4 +1,5 @@
-# 文字彩色填充
+# 层叠海浪特效
 ======================
 ## 知识点
-1. [mix-blend-mode](https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode)
+1. animation-duration 完成一个动画的时间
+2. transform-origin 动画转换
