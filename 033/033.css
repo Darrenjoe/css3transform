@@ -1,0 +1,53 @@
+body{
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+/* 设置字体样式 */
+p {
+  margin: 0;
+  color: white;
+  font-size: 100px;
+  font-weight: blod;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  animation: show-hide 10s infinite;
+  filter: opacity(0);
+}
+/* 让文本重叠 */
+p:nth-child(1) {
+  transform: translateY(50%);
+  animation-direction: normal;
+}
+p:nth-child(2) {
+  transform: translateY(-50%);
+  animation-direction: reverse;
+  animation-delay: -1s;
+}
+/* 定义动画 */
+@keyframes show-hide {
+  0% {
+    filter: opacity(0) blur(0.08em);
+    letter-spacing: -0.8em;
+  }
+  25% {
+    filter: opacity(1) blur(0.08em);
+  }
+  40% {
+    filter: opacity(1) blur(0.24em);
+  }
+  40% {
+    filter: opacity(0) blur(0.24em);
+    letter-spacing: 0.24em;
+  }
+}
+/* 设置对比度 */
+.contain {
+  filter: contrast(10);
+  background-color: black;
+  overflow: hidden;
+}
