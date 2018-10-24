@@ -1,0 +1,59 @@
+body{
+  margin: 0;
+}
+.sky {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: skyblue;
+  animation-name: animate-sky;
+  overflow: hidden;
+}
+.sun {
+  position: absolute;
+  width: 50vmin;
+  height: 50vmin;
+  border-radius: 50%;
+  background-color: gold;
+  animation-name: animate-sun;
+}
+/* 画出月亮 */
+.moon {
+  position: absolute;
+  width: 50vmin;
+  height: 50vmin;
+  border-radius: 50%;
+  background-color: slategray;
+  transform: translateX(-55vmin);
+  animation-name: animate-moon;
+}
+/* 定义天空的变化，日蚀天空会变黑 */
+@keyframes animate-sky {
+  50% {
+    background-color: black;
+  }
+}
+@keyframes animate-sun {
+  50% {
+    box-shadow: 0 0 5em 1em white;
+  }
+}
+@keyframes animate-moon {
+  from {
+      transform: translateX(-100vmin);
+  }
+
+  50% {
+      background-color: black;
+  }
+
+  to {
+      transform: translateX(100vmin);
+  }
+}
+* {
+  animation: 10s linear infinite;
+}
