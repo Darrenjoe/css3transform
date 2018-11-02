@@ -1,0 +1,69 @@
+body{
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at center,lightgreen, white);
+}
+:root {
+  --outer-w: 49em;
+  --outer-h: 40em;
+  --middle-w: 32em;
+  --middle-h: 26em;
+  --inner-w: 16em;
+  --inner-h: 13em;
+}
+.vue {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: var(--outer-w);
+  height: var(--outer-h);
+  font-size: 6px;
+  overflow: hidden;
+}
+.vue .outer,
+.vue .medium,
+.vue .inner {
+    position: absolute;
+    border-style: solid;
+    border-color: transparent;
+    border-top-width: var(--h);
+    border-top-color: var(--c);
+    border-left-width: calc(var(--w) / 2);
+    border-right-width: calc(var(--w) / 2);
+    animation: animate 3s linear infinite;
+}
+.vue .outer {
+  --w: var(--outer-w);
+  --h: var(--outer-h);
+  --c: #42b883; /* aragon green */
+}
+.vue .medium {
+  --w: var(--middle-w);
+  --h: var(--middle-h);
+  --c: #35495e;  /* derk denim */
+  animation-delay: 0.1s;
+}
+.vue .inner {
+  --w: var(--inner-w);
+  --h: var(--inner-h);
+  --c: white;
+  animation-delay: 0.2s;
+}
+@keyframes animate {
+    0%, 5% {
+        top: -100%;
+    }
+    15%, 80% {
+        top: 0;
+        filter: opacity(1);
+        transform: scale(1);
+    }
+    90%, 100% {
+        top: 100%;
+        filter: opacity(0);
+        transform: scale(0);
+    }
+}
