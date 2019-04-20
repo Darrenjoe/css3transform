@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>交辉的光斑粒子</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./d3.v5.min.js"></script>
+</head>
+<body>
+  <div class='container'></div>
+  <script>
+    const COUNT = 200
+    let random = (min, max) => Math.random() * (max - min) + min
+    let container = document.querySelector('.container')
+    Array(COUNT).fill('').forEach((x, i) => {
+        let span = document.createElement('span')
+        span.style.setProperty('--x', random(1, 99))
+        span.style.setProperty('--y', random(1, 99))
+        span.style.setProperty('--n', i)
+        span.style.setProperty('--dark-color', `hsl(${70 + i * 0.1}, 100%, 50%)`)
+        span.style.setProperty('--bright-color', `hsl(${85 + i * 0.1}, 100%, 60%)`)
+        container.appendChild(span)
+    })
+  </script>
+</body>
+</html>
